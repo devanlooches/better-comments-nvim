@@ -4,5 +4,5 @@ fun! BetterComments()
 endfun
 
 augroup! BetterComments
-    autocmd! CursorMoved * call BetterComments()
+    autocmd! CursorMoved,CursorMovedI * call BetterComments()
 augroup END
