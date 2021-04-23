@@ -16,7 +16,7 @@ function HighlightUpdate()
     local lines = vim.api.nvim_buf_get_lines(0,0,-1,true)
     for i,line in pairs(lines) do
         for k,v in pairs(HighlightTags) do
-            if line:match(commentstring.."%s*"..k) ~= nil then
+            if line:match("^"..commentstring.."%s*"..k) ~= nil then
                 vim.highlight.create("bettercomments:"..k,{guifg=v})
                 vim.api.nvim_buf_add_highlight(0,highlightNS,"bettercomments:" ..k,i-1,0,-1)
             end
