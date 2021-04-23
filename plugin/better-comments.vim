@@ -3,6 +3,6 @@ fun! BetterComments()
     lua require('better-comments').HighlightUpdate()
 endfun
 
-augroup! BetterComments
-    autocmd! CursorMoved,CursorMovedI * call BetterComments()
+augroup BetterComments
+    autocmd CursorMoved,CursorMovedI * :call BetterComments()
 augroup END
