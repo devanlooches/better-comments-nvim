@@ -4,7 +4,7 @@ fun! BetterComments()
 endfun
 
 augroup BetterComments
-    autocmd CursorMoved,CursorMovedI * :call BetterComments()
+    autocmd VimEnter,TextChanged,TextChangedI * :call BetterComments()
 augroup END
 
 "Example configuration
