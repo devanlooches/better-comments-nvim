@@ -4,6 +4,7 @@ local highlightNS = vim.api.nvim_create_namespace("bettercomments")
 function HighlightUpdate()
    vim.cmd'let g:commentstring = &commentstring'
     local commentstring = string.gsub(vim.g["commentstring"],'%%s',"")
+    print(commentstring)
     local position = vim.api.nvim_win_get_cursor(0)[1]
     local cursorline = vim.api.nvim_buf_get_lines(0, position-1,position,true)[1]
     if cursorline:match("^"..commentstring) then
@@ -11,7 +12,7 @@ function HighlightUpdate()
     local lines = vim.api.nvim_buf_get_lines(0,0,-1,true)
     for i,line in pairs(lines) do
         for k,v in pairs(HighlightTags) do
-            if line:match("^"..commentstring..k) ~= nil then
+            if line:match("^%s*"..commentstring.."%s*"..k.."%s*") ~= nil then
                 vim.highlight.create("bettercomments:"..k,{guifg=v})
                 vim.api.nvim_buf_add_highlight(0,highlightNS,"bettercomments:" ..k,i-1,0,-1)
             end

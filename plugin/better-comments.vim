@@ -6,3 +6,10 @@ endfun
 augroup BetterComments
     autocmd CursorMoved,CursorMovedI * :call BetterComments()
 augroup END
+
+"Example configuration
+"lua << END
+"local HighlightTags = {}
+"HighlightTags["TEST"] = '#FF9000'
+"vim.g.highlightTags = HighlightTags
+"END
