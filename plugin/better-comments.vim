@@ -11,5 +11,3 @@ augroup END
 "lua << END
 "local HighlightTags = {}
 "HighlightTags["TEST"] = '#FF9000'
-"vim.g.highlightTags = HighlightTags
-"END

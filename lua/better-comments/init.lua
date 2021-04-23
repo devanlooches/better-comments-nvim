@@ -1,5 +1,9 @@
-HighlightTags = {}
-HighlightTags["!"] = '#F90000'
+if vim.g["highlightTags"] then
+    HighlightTags = vim.g["highlightTags"]
+else
+    HighlightTags = {}
+    HighlightTags["!"] = '#F90000'
+end
 local highlightNS = vim.api.nvim_create_namespace("bettercomments")
 function HighlightUpdate()
    vim.cmd'let g:commentstring = &commentstring'
@@ -12,7 +16,7 @@ function HighlightUpdate()
     local lines = vim.api.nvim_buf_get_lines(0,0,-1,true)
     for i,line in pairs(lines) do
         for k,v in pairs(HighlightTags) do
-            if line:match("^%s*"..commentstring.."%s*"..k.."%s*") ~= nil then
+            if line:match(commentstring..k) ~= nil then
                 vim.highlight.create("bettercomments:"..k,{guifg=v})
                 vim.api.nvim_buf_add_highlight(0,highlightNS,"bettercomments:" ..k,i-1,0,-1)
             end
