@@ -8,9 +8,9 @@ augroup BetterComments
 augroup END
 
 "Example configuration
-"lua << END
-"local HighlightTags = {}
-"HighlightTags["TEST"] = '#FF9000'
-"HighlightTags["!"] = '#A00000'
-"vim.g.highlightTags = HighlightTags
-"END
+lua << END
+local HighlightTags = {}
+HighlightTags["TEST"] = {guifg='#FF9000'}
+HighlightTags["!"] = {guifg='#A00000'}
+vim.g.highlightTags = HighlightTags
+END
