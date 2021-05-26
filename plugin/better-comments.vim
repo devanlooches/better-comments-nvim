@@ -9,8 +9,8 @@ augroup END
 
 
 "Example configuration
-lua << END
-local HighlightTags = {}
-HighlightTags["YOUR_TAG"] = {guifg='#FF9000'}
-vim.g.highlightTags = HighlightTags
-END
+"lua << END
+"local HighlightTags = {}
+"HighlightTags["YOUR_TAG"] = {guifg='#FF9000'}
+"vim.g.highlightTags = HighlightTags
+"END
