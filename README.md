@@ -21,6 +21,7 @@ The gui property supports these values:
 * strikethrough
 
 ## Defaults
+The default Configurations are as follows:
 ```lua
 HighlightTags = {}
 HighlightTags["!"] = {guifg='#ff2d00'}
