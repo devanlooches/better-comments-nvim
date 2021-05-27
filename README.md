@@ -19,3 +19,14 @@ The gui property supports these values:
 * standout
 * nocombine
 * strikethrough
+
+## Defaults
+```lua
+HighlightTags = {}
+HighlightTags["!"] = {guifg='#ff2d00'}
+HighlightTags["?"] = {guifg='#1f98ff'}
+HighlightTags["todo"] = {guifg='#ff8c00'}
+HighlightTags["TODO"] = {guifg='#ff8c00'}
+HighlightTags["*"] = {guifg='#98C379'}
+vim.g.highlightTags = HighlightTags
+```
