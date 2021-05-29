@@ -1,6 +1,6 @@
 # Better Comments
 
-[Demo Image](imgs/demo.png)
+<img src="/imgs/demo.png" alt="Demo">
 
 ## Installation
 Install with your favorite plugin manager.
