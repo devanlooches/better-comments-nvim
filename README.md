@@ -1,5 +1,7 @@
 # Better Comments
 
+[Demo Image](imgs/demo.png)
+
 ## Installation
 Install with your favorite plugin manager.
 
